@@ -7,7 +7,7 @@ from best_fit import fit
 from rectangle import Rectangle
 from note import Note
 from random import randint
-from midiutil.MidiFile3 import MIDIFile
+from midiutil import MIDIFile
 
 staff_files = [
     "resources/template/staff2.png", 
@@ -81,7 +81,7 @@ def open_file(path):
     subprocess.run([cmd, path])
 
 if __name__ == "__main__":
-    img_file = sys.argv[1:][0]
+    img_file = "resources/samples/fire.jpg"#sys.argv[1:][0]
     img = cv2.imread(img_file, 0)
     img_gray = img#cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     img = cv2.cvtColor(img_gray,cv2.COLOR_GRAY2RGB)
